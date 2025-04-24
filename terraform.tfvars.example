@@ -1,0 +1,18 @@
+# GitHub OIDC Integration for Azure - Configuration Example
+# Copy this to terraform.tfvars and update with your values
+
+# GitHub Configuration
+github_org   = "your-org-name"
+github_repo  = "your-repo-name"
+github_branch = "main"
+github_environments = ["dev", "prod"]  # Optional: environments to create credentials for
+
+# Azure Configuration
+subscription_id     = "your-subscription-id" 
+resource_group_name = "github-oidc-rg"
+location            = "eastus"
+role_definition_name = "Contributor"
+
+# GitHub Secrets Configuration (Optional)
+create_github_secrets = true
+# github_token = "your-github-token"  # Uncomment and set if create_github_secrets = true
